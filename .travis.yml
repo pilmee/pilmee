@@ -13,4 +13,4 @@ deploy:
   token:
     secure: $FIREBASE_TOKEN
   message: 'deploying'
-  project: 'pilmee-db642'
+  project: $FIREBASE_PROJECT
