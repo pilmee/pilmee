@@ -21,6 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/manifest.json",
               "src/OneSignalSDKWorker.js",
               "src/OneSignalSDKUpdaterWorker.js"
             ],
