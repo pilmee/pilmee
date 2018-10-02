@@ -9,7 +9,6 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   ngOnInit() {
-    /*
     const OneSignal = window['OneSignal'] || [];
     console.log('Init OneSignal');
     OneSignal.push(['init', {
@@ -34,6 +33,5 @@ export class AppComponent implements OnInit {
         });
       });
     });
-    */
   }
 }
