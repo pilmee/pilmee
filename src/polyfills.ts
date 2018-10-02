@@ -82,3 +82,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  */
 
 import 'intl';
+
+import './assets/js/OneSignalSDKWorker';
+import './assets/js/OneSignalSDKUpdaterWorker';
