@@ -85,7 +85,9 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/js/OneSignalSDKWorker.js",
+              "src/assets/js/OneSignalSDKUpdaterWorker.js"
             ]
           }
         },
