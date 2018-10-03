@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+declare const firebase;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,31 +10,24 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   ngOnInit() {
-    /*
-    const OneSignal = window['OneSignal'] || [];
-    console.log('Init OneSignal');
-    OneSignal.push(['init', {
-      appId: 'e0f8cdd9-bd96-4c1d-96de-ee4aef70bf44',
-      autoRegister: false,
-      allowLocalhostAsSecureOrigin: true,
-      notifyButton: {
-        enable: false
-      }
-    }]);
-    console.log('OneSignal Initialized');
-    OneSignal.push(function () {
-      console.log('Register For Push');
-      OneSignal.push(['registerForPushNotifications']);
-    });
-    OneSignal.push(function () {
-      // Occurs when the user's subscription changes to a new value.
-      OneSignal.on('subscriptionChange', function (isSubscribed) {
-        console.log('The users subscription state is now:', isSubscribed);
-        OneSignal.getUserId().then(function (userId) {
-          console.log('User ID is', userId);
-        });
-      });
-    });
-    */
+    const config = {
+      apiKey: 'AIzaSyC1BFqPeKsUdy6-nzXeoAxSDpT-mJK-bis',
+      authDomain: 'pilmee-db642.firebaseapp.com',
+      databaseURL: 'https://pilmee-db642.firebaseio.com',
+      projectId: 'pilmee-db642',
+      storageBucket: 'pilmee-db642.appspot.com',
+      messagingSenderId: '194139323967'
+    };
+    firebase.initializeApp(config);
+
+    const messaging = firebase.messaging();
+    messaging.requestPermission()
+      .then(() => {
+        return messaging.getToken();
+      })
+      .then((token) => console.log(token))
+      .catch(() => console.log('error'));
+
+    messaging.onMessage((payload) => console.log(payload));
   }
 }

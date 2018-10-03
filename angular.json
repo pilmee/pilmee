@@ -21,9 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.json",
-              "src/OneSignalSDKWorker.js",
-              "src/OneSignalSDKUpdaterWorker.js"
+              "src/firebase-messaging-sw.js"
             ],
             "styles": [
               {
@@ -86,9 +84,7 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/assets/js/OneSignalSDKWorker.js",
-              "src/assets/js/OneSignalSDKUpdaterWorker.js"
+              "src/assets"
             ]
           }
         },
