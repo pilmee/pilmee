@@ -20,5 +20,12 @@ const context = require.context('./', true, /\.spec\.ts$/);
 context.keys().map(context);
 
 Object.defineProperty(window, 'firebase', {
-  value: {}
+  value: {
+    initializeApp: () => {},
+    messaging: () => ({
+      getToken: () => (''),
+      requestPermission: () => new Promise(() => {}),
+      onMessage: () => {}
+    })
+  }
 });
