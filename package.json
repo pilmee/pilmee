@@ -27,7 +27,7 @@
     "intl": "^1.2.5",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26",
-    "@angular/cdk": "^6.2.0"
+    "@angular/cdk": "^9.0.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.1",
